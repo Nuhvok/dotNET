@@ -1,0 +1,61 @@
+﻿<!-- Brandon Rolfe -->
+<!-- Project #7 (Tic-Tac-Toe) -->
+<!-- 5/3/21 -->
+    
+<Window x:Class="TicTacToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTacToe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <!-- Main Window -->
+    <Grid Background="#153133">
+
+
+        <!-- Game Board -->
+        <Grid x:Name="Board" ShowGridLines="True" Background="#53C2CA" IsEnabled="False" Width="200" Height="200" Margin="470,92,80,92" PreviewMouseLeftButtonUp="Board_PreviewMouseLeftButtonUp">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+        </Grid>
+
+        <!-- Game Board Turn Box -->
+        <Label Name="TurnBox" Content="Player's turn" Background="#53D2CA" Foreground="#153133" Visibility="Hidden" HorizontalAlignment="Left" Margin="520,50,0,0" Width="125" VerticalAlignment="Top"/>
+
+        <!-- Pre-Game data entry fields -->
+        <Label Name="PlayerOneTitle" Content="Player One:" Foreground="#53C2CA" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top"/>
+        <Label Name="PlayerOneName" Content="Player One Name:" Foreground="#53C2CA" HorizontalAlignment="Left" Margin="60,110,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="PlayerOneNameBox" Background="#53D2CA" Foreground="#153133" HorizontalAlignment="Left" Margin="180,115,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Name="PlayerOneSymbol" Content="Player One Symbol:" Foreground="#53C2CA" HorizontalAlignment="Left" Margin="60,140,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="PlayerOneSymbolBox" Background="#53D2CA" Foreground="#153133" HorizontalAlignment="Left" Margin="180,145,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="15"/>
+        <Label Name="PlayerTwoTitle" Content="Player Two:" Foreground="#53C2CA" HorizontalAlignment="Left" Margin="40,200,0,0" VerticalAlignment="Top"/>
+        <Label Name="PlayerTwoName" Content="Player Two Name:" Foreground="#53C2CA" HorizontalAlignment="Left" Margin="60,230,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="PlayerTwoNameBox" Background="#53D2CA" Foreground="#153133" HorizontalAlignment="Left" Margin="180,235,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Name="PlayerTwoSymbol" Content="Player Two Symbol:" Foreground="#53C2CA" HorizontalAlignment="Left" Margin="60,260,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="PlayerTwoSymbolBox" Background="#53D2CA" Foreground="#153133" HorizontalAlignment="Left" Margin="180,265,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="15"/>
+        <Button Name="StartGame" Content="Start Game" Background="#53D2CA" Foreground="#153133" HorizontalAlignment="Left" Margin="179,306,0,0" VerticalAlignment="Top" Click="StartGame_Click"/>
+
+        <!-- Mid-Game data fields -->
+        <Label Name="PlayerOneGameStarted" Content="Player One (X):" Foreground="#53C2CA" Visibility="Hidden" HorizontalAlignment="Left" Margin="60,170,0,0" VerticalAlignment="Top"/>
+        <Label Name="PlayerOneScore" Content="0" Foreground="#53C2CA" Visibility="Hidden" HorizontalAlignment="Left" Margin="210,170,0,0" VerticalAlignment="Top"/>
+        <Label Name="PlayerTwoGameStarted" Content="Player Two (Y):" Foreground="#53C2CA" Visibility="Hidden" HorizontalAlignment="Left" Margin="60,200,0,0" VerticalAlignment="Top"/>
+        <Label Name="PlayerTwoScore" Content="0" Foreground="#53C2CA" Visibility="Hidden" HorizontalAlignment="Left" Margin="210,200,0,0" VerticalAlignment="Top"/>
+        <Label Name="Ties" Content="Ties:" Foreground="#53C2CA" Visibility="Hidden" HorizontalAlignment="Left" Margin="60,230,0,0" VerticalAlignment="Top"/>
+        <Label Name="TieScore" Content="0" Foreground="#53C2CA" Visibility="Hidden" HorizontalAlignment="Left" Margin="210,230,0,0" VerticalAlignment="Top"/>
+        <Button Name="RestartGame" Content="Rematch" Background="#53D2CA" Foreground="#153133" Visibility="Hidden" HorizontalAlignment="Left" Margin="180,305,0,0" VerticalAlignment="Top" Click="RestartGame_Click"/>
+        <Label Name="OutputHolder" Content="" Foreground="#53C2CA" HorizontalAlignment="Left" Margin="60,330,0,0" VerticalAlignment="Top"/>
+
+        <!-- Button for a sample game played by the computer -->
+        <Button Name="SampleGame" Content="Sample" Background="#53D2CA" Foreground="#153133" Visibility="Visible" HorizontalAlignment="Left" Margin="180,365,0,0" VerticalAlignment="Top" Click="SampleGame_Click"/>
+    </Grid>
+</Window>
