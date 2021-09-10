@@ -1,0 +1,43 @@
+﻿<!-- Brandon Rolfe -->
+<!-- Project #5 (Bank Accounts) -->
+<!-- 4/9/21 -->
+    
+    <Window x:Class="Bank_Accounts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bank_Accounts"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--Title-->
+        <Label Content="Manage Bank Accounts" Margin="0,0,10,0"/>
+
+        <!-- Choose Account row -->
+        <Label Content="Choose Account:" Margin="0,30,10,0"/>
+        <TextBox Name="AccountIn" HorizontalAlignment="Left" Margin="100,35,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <!-- Deposit row -->
+        <Label Content="Make Deposit:" Margin="0,60,10,0"/>
+        <TextBox Name="DepositIn" HorizontalAlignment="Left" Margin="100,65,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="GetDepositIn" Content="Deposit" HorizontalAlignment="Left" Margin="230,63,0,0" VerticalAlignment="Top" Click="GetDepositIn_Click"/>
+
+        <!-- Withdrawal row -->
+        <Label Content="Make Withdrawal:" Margin="0,90,10,0"/>
+        <TextBox Name="WithdrawalIn" HorizontalAlignment="Left" Margin="100,95,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="GetWithdrawalIn" Content="Withdraw" HorizontalAlignment="Left" Margin="230,93,0,0" VerticalAlignment="Top" Click="GetWithdrawalIn_Click"/>
+
+        <!-- Interest row -->
+        <Label Content="Calculate Monthly Interest:" Margin="0,120,10,0"/>
+        <Button Name="CalculateMonthlyInterest" Content="Calculate" HorizontalAlignment="Left" Margin="230,123,0,0" VerticalAlignment="Top" Click="CalculateMonthlyInterest_Click"/>
+
+        <!-- Result box -->
+        <Label Name="Result" Content="test" Margin="0,150,10,0"/>
+
+        <!-- List of accounts -->
+        <ListBox x:Name="accList" Width="200" Margin="536,0,64,0">
+
+        </ListBox>
+    </Grid>
+</Window>
